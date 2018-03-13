@@ -1,0 +1,27 @@
+<h1>forgot password page!</h1>
+
+<div class="col-md-8 col-md-offset-2">
+    <form [formGroup]="myForm" (ngSubmit)="confirmidmail()">
+        <div class="form-group">
+            <label for="id">ID</label>
+            <input
+                    type="text"
+                    id="id"
+                    class="form-control"
+                    formControlName="id">
+        </div>
+        <div class="form-group">
+            <label for="email">RecoveryEmail</label>
+            <input
+                    type="email"
+                    id="email"
+                    class="form-control"
+                    formControlName="email">
+        </div>
+        {{errMsg}}
+        <button
+                class="btn btn-primary"
+                type="submit"
+                [disabled]="!myForm.valid">Submit</button>
+    </form>
+</div>
