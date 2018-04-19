@@ -662,7 +662,7 @@ router.post('/searchProduct',  function (req, res) {
     console.log('search product express');
     console.log(req.body.keyword)
     client.search({
-        index: 'test',
+        index: 'mall',
         //q: req.body.keyword
         q: req.body.keyword
     }).then(function (result) {
